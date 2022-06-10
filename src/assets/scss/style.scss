@@ -1,0 +1,27 @@
+@import "base/_mixins.scss";
+@import "base/_vars.scss";
+@import "base/nullstyle";
+@import "base/fonts";
+@import "base/nouislider.min";
+
+[class*="__container"] {
+  max-width: 1310px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  &._lock {
+    overflow: hidden;
+  }
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #536473;
+}
+
+@import "partials/header";
+@import "partials/footer";
+@import "base/wrapper";

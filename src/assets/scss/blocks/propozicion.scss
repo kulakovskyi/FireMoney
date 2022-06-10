@@ -1,0 +1,212 @@
+.propozicion {
+  background: #f6f9fc;
+  padding: 49px 0 44px 0;
+
+  .propozicion__container {
+    border-bottom: 1px solid rgba(69, 81, 95, 0.05);
+
+    @include breakpoint($tablet-bp) {
+      border: none;
+    }
+  }
+
+  @include breakpoint($tablet-bp) {
+    padding: 50px 0 70px 0;
+  }
+
+  @include breakpoint($mobile-bp) {
+    padding: 39px 0 50px 0;
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 45px;
+  color: #45515f;
+  text-align: center;
+}
+
+.propozicion__title {
+  margin: 0 0 36px 0;
+
+  @include breakpoint($mobile-bp) {
+    margin: 0 0 31px 0;
+  }
+}
+
+.propozicion__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0 0 33px 0;
+
+  @include breakpoint(1266px) {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  @include breakpoint($tablet-bp) {
+    flex-direction: column;
+  }
+
+  @include breakpoint($mobile-bp) {
+    margin: 0 0 25px 0;
+  }
+}
+
+.propozicion__item {
+  padding: 36px 70px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 4px 44px rgba(84, 104, 123, 0.05);
+  border-radius: 22px;
+  position: relative;
+  overflow: hidden;
+
+  @include breakpoint(404px) {
+    padding: 36px 45px;
+  }
+
+  @include breakpoint(366px) {
+    padding: 36px 20px 36px 35px;
+  }
+
+  .propozicion__item__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    margin: 0 0 14px 0;
+
+    @include breakpoint($mobile-bp) {
+      font-size: 23px;
+    }
+  }
+
+  .item__title__one {
+    span {
+      color: #ffc83e;
+    }
+  }
+
+  .item__title__two {
+    span {
+      color: #ff7b00;
+    }
+  }
+
+  .item__title__three {
+    span {
+      color: #fa5914;
+    }
+  }
+
+  .propozicion__item__line {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 182%;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    top: 18px;
+    left: -70px;
+    transform: rotate(-45deg);
+    width: 200px;
+    box-shadow: 0px 4px 44px rgba(84, 104, 123, 0.05);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 34px;
+      height: 25px;
+      transform: rotate(-45deg) skewX(45deg) translate(0, -40px);
+      background: rgba(255, 255, 255, 0.253);
+      box-shadow: 0px 4px 44px rgba(84, 104, 123, 0.05);
+      backdrop-filter: blur(0.1px);
+      animation-name: blick;
+      animation-duration: 1.5s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes blick {
+      0% {
+        transform: rotate(-45deg) skewX(45deg) translate(0, -40px);
+      }
+      100% {
+        transform: rotate(-45deg) skewX(45deg) translate(0, 80px);
+      }
+    }
+  }
+
+  .item__line__one {
+    background: #ffc83e;
+  }
+
+  .item__line__two {
+    background: #ff7b00;
+  }
+
+  .item__line__three {
+    background: #fa5914;
+  }
+
+  .propozicion__item__text {
+    padding: 0 0 0 22px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 182%;
+    position: relative;
+
+    @include breakpoint(332px) {
+      font-size: 13px;
+    }
+
+    span {
+      font-weight: 500;
+      color: #45515f;
+    }
+
+    &:first-of-type {
+      &:before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 6px;
+        width: 12px;
+        height: 11px;
+        background: url(../../assets/images/prop/calendar.png) no-repeat;
+        background-size: cover;
+      }
+    }
+
+    &:last-of-type {
+      &:before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 6px;
+        width: 9px;
+        height: 10px;
+        background: url(../../assets/images/prop/money.png) no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.propozicion__copyright {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 145.5%;
+  color: #45515f;
+  text-align: center;
+  margin: 0 0 51px 0;
+
+  @include breakpoint($tablet-bp) {
+    margin: 0;
+  }
+}

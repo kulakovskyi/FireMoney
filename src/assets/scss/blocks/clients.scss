@@ -1,0 +1,101 @@
+.clients {
+  padding: 55px 0 59px 0;
+  background: url(../../assets/images/clients/bg-clients.jpg) no-repeat;
+  background-size: cover;
+
+  @include breakpoint($mobile-bp) {
+    padding: 32px 0 34px 0;
+  }
+}
+
+.clients__title {
+  color: #ffffff;
+  margin: 0 0 37px 0;
+
+  @include breakpoint($mobile-bp) {
+    margin: 0 0 29px 0;
+  }
+}
+
+.clients__item {
+  padding: 26px 36px 25px 42px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 4px 44px rgba(84, 104, 123, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+
+  svg {
+    fill: #92a0ab;
+    animation-name: animated-clients-svg;
+    animation-duration: 2.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+}
+
+.clients__item__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #45515f;
+  margin: 0 0 6px 0;
+}
+
+.clients__item__text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #536473;
+  margin: 0 0 8px 0;
+}
+
+.clients__item__town {
+  padding: 0 0 0 20px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #93a0ab;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 16px;
+    background: url(../../assets/images/clients/icon-town.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+.swiper2 {
+  overflow: hidden;
+}
+
+@keyframes animated-clients-svg {
+  0% {
+    fill: #92a0ab;
+  }
+
+  20% {
+    fill: #92a0ab;
+  }
+
+  50% {
+    fill: #ffad45;
+  }
+
+  80% {
+    fill: #ffad45;
+  }
+
+  100% {
+    fill: #92a0ab;
+  }
+}

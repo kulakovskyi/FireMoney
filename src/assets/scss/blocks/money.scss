@@ -1,0 +1,345 @@
+.money {
+  padding: 0 0 45px 0;
+  background: #f6f9fc;
+}
+
+.money__title {
+  margin: 0 0 50px 0;
+}
+
+.money__row {
+  display: flex;
+  justify-content: center;
+  gap: 107px;
+  position: relative;
+  margin: 0 0 44px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 7px;
+    background: #ffffff;
+    border-radius: 8px;
+    top: 55%;
+    transform: translateY(50%);
+
+    @include breakpoint($tablet-bp) {
+      height: 100%;
+      width: 7px;
+      left: 39.5%;
+      top: -15px;
+      transform: translateY(0) translateX(-50%);
+    }
+
+    @include breakpoint(340px) {
+      left: 38.5%;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 7px;
+    background: linear-gradient(81.55deg, #ffc83e 33.93%, #ff9f47 73.78%);
+    border-radius: 8px;
+    top: 55%;
+    left: 0;
+    transform: translateY(50%);
+    z-index: 1;
+    animation-name: animated-line;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    @include breakpoint($tablet-bp) {
+      height: 0;
+      width: 7px;
+      left: 39.5%;
+      top: -15px;
+      transform: translateY(0) translateX(-47%);
+      animation-duration: 10s;
+      animation-name: animated-line-tablet;
+    }
+
+    @include breakpoint(340px) {
+      left: 38.5%;
+    }
+  }
+
+  @include breakpoint($tablet-bp) {
+    flex-direction: column;
+    align-items: center;
+    gap: 78px;
+    max-width: 310px;
+    margin: 0 auto 44px auto;
+  }
+}
+
+.money__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 90px;
+  position: relative;
+
+  &::before {
+    content: "1";
+    @extend %flex-center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 145.5%;
+    color: #d6d3d3;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #ffffff;
+    top: 58%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    @include breakpoint($tablet-bp) {
+      top: 49%;
+      left: 37%;
+    }
+  }
+
+  @include breakpoint($tablet-bp) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 57px;
+  }
+
+  &:nth-child(1):before {
+    animation-name: anim-circle-one;
+    animation-delay: 1.2s;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    @include breakpoint($tablet-bp) {
+      animation-delay: 0.8s;
+    }
+  }
+
+  &:nth-child(2):before {
+    content: "2";
+    left: 42%;
+    animation-name: anim-circle-two;
+    animation-delay: 3.5s;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    @include breakpoint($tablet-bp) {
+      top: 45%;
+      left: 37%;
+    }
+  }
+  &:nth-child(3):before {
+    content: "3";
+    left: 46%;
+    animation-name: anim-circle-three;
+    animation-delay: 6.3s;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    @include breakpoint($tablet-bp) {
+      top: 45%;
+      left: 37%;
+    }
+  }
+  &:nth-child(4):before {
+    content: "4";
+    left: 49%;
+    animation-name: anim-circle-fourth;
+    animation-delay: 9.8s;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    @include breakpoint($tablet-bp) {
+      top: 45%;
+      left: 37%;
+      animation-delay: 9s;
+    }
+  }
+
+  &:nth-child(1) svg {
+    animation-name: anim-svg-one;
+    animation-delay: 1.2s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    @include breakpoint($tablet-bp) {
+      animation-delay: 0.8s;
+    }
+  }
+
+  &:nth-child(2) svg {
+    animation-name: anim-svg-one;
+    animation-delay: 3.5s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  &:nth-child(3) svg {
+    animation-name: anim-svg-one;
+    animation-delay: 6.3s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  &:nth-child(4) svg {
+    animation-name: anim-svg-one;
+    animation-delay: 9.8s;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    @include breakpoint($tablet-bp) {
+      animation-delay: 9s;
+    }
+  }
+}
+
+.money__item__title {
+  max-width: 248px;
+  text-align: center;
+  height: auto;
+  flex: 1 1 auto;
+
+  @include breakpoint($tablet-bp) {
+    max-width: 130px;
+    text-align: start;
+    flex: 0 1 auto;
+  }
+}
+
+.item__title__min {
+  max-width: 135px;
+}
+
+.money__item__image {
+  @extend %flex-center;
+
+  svg {
+    @extend %flex-center;
+    width: 70px;
+    height: 80px;
+    fill: #cfd5dd;
+  }
+}
+
+.momey__btn {
+  @extend %flex-center;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+  padding: 21px 44px;
+  background: linear-gradient(81.55deg, #ffc83e 33.93%, #ff7347 73.78%);
+  border-radius: 8px;
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    text-shadow: 2px 2px 5px white;
+  }
+}
+
+@keyframes animated-line {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes animated-line-tablet {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes anim-circle-one {
+  0% {
+    background: #ffffff;
+    color: #d6d3d3;
+    fill: #cfd5dd;
+  }
+  100% {
+    background: #ffa147;
+    color: #ffffff;
+    fill: #ffa147;
+  }
+}
+
+@keyframes anim-circle-two {
+  0% {
+    background: #ffffff;
+    color: #d6d3d3;
+  }
+  100% {
+    background: #ffa147;
+    color: #ffffff;
+  }
+}
+
+@keyframes anim-circle-three {
+  0% {
+    background: #ffffff;
+    color: #d6d3d3;
+  }
+  100% {
+    background: #ffa147;
+    color: #ffffff;
+  }
+}
+
+@keyframes anim-circle-fourth {
+  0% {
+    background: #ffffff;
+    color: #d6d3d3;
+  }
+  100% {
+    background: #ffa147;
+    color: #ffffff;
+  }
+}
+
+@keyframes anim-svg-one {
+  0% {
+    fill: #cfd5dd;
+  }
+  100% {
+    fill: #ffa147;
+    transform: scale(1.1);
+  }
+}

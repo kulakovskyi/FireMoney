@@ -1,0 +1,444 @@
+.hot {
+  padding: 150px 0 67px 0;
+  background: url(../../assets/images/hot/hot-bg.jpg) no-repeat;
+  background-size: cover;
+
+  @include breakpoint(1220px) {
+    padding: 150px 0 21px 0;
+  }
+
+  @include breakpoint(868px) {
+    background-position: -800px 0;
+  }
+
+  @include breakpoint($mobile-bp) {
+    padding: 106px 0 21px 0;
+  }
+}
+
+.hot__container {
+  position: relative;
+
+  .hot__image {
+    position: absolute;
+    bottom: -67px;
+    left: 50%;
+    transform: translateX(-53%);
+    pointer-events: none;
+
+    @include breakpoint(1300px) {
+      max-width: 550px;
+      transform: translateX(-55%);
+    }
+
+    @include breakpoint(1238px) {
+      max-width: 550px;
+      transform: translateX(-57%);
+    }
+
+    @include breakpoint(1220px) {
+      bottom: -21px;
+      left: 350px;
+    }
+
+    @include breakpoint(970px) {
+      left: 250px;
+    }
+
+    @include breakpoint(868px) {
+      display: none;
+    }
+  }
+}
+
+.hot__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  @include breakpoint(1220px) {
+    flex-direction: column;
+  }
+}
+
+.hot__info {
+  color: #ffffff;
+
+  @include breakpoint(1220px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.hot__info__head {
+  display: inline-block;
+  position: relative;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: uppercase;
+  padding: 15px 23px 15px 75px;
+  margin: 0 0 20px 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  color: #3c4260;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    bottom: 10px;
+    left: 8px;
+    background: url(../../assets/images/hot/fire.png) no-repeat;
+    animation-name: arrow_scroll;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+  }
+
+  @include breakpoint(1220px) {
+    margin: 0 0 25px 0;
+  }
+
+  @include breakpoint($mobile-bp) {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 37px 0;
+  }
+
+  @include breakpoint(386px) {
+    font-size: 17px;
+  }
+
+  @include breakpoint(350px) {
+    font-size: 14.5px;
+  }
+}
+
+@keyframes arrow_scroll {
+  0% {
+    top: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    top: -10px;
+    transform: scale(1) rotate(-15deg);
+  }
+
+  100% {
+    top: 0px;
+    transform: scale(0.8);
+  }
+}
+
+.hot__info__title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 111.5%;
+  text-transform: uppercase;
+  max-width: 477px;
+  margin: 0 0 15px 0;
+
+  @include breakpoint(1220px) {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 0 5px 0;
+  }
+
+  @include breakpoint($mobile-bp) {
+    font-size: 36px;
+    line-height: 111.5%;
+    margin: 0 0 18px 0;
+  }
+}
+
+.hot__info__text {
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 133.5%;
+  max-width: 477px;
+  margin: 0 0 110px 0;
+
+  @include breakpoint(1220px) {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 0 10px 0;
+  }
+
+  @include breakpoint($mobile-bp) {
+    font-size: 20px;
+    line-height: 133.5%;
+    margin: 0 0 18px 0;
+  }
+}
+
+.hot__info__copyright {
+  font-size: 14px;
+  line-height: 145.5%;
+  max-width: 300px;
+
+  @include breakpoint(1220px) {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 0 37px 0;
+  }
+}
+
+/**************FORM***************/
+
+.hot__calculate {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 29px 57px 59px 57px;
+
+  @include breakpoint(1220px) {
+    align-self: flex-start;
+    margin-left: 450px;
+  }
+
+  @include breakpoint(868px) {
+    align-self: center;
+    margin-left: 0px;
+  }
+}
+
+.form__title {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #45515f;
+  margin: 0 0 46px 0;
+}
+
+/************slider-1 sum****************/
+
+.form__title__border {
+  border-top: 1px solid #ececec79;
+  padding: 21px 0 0 0;
+  width: 100%;
+}
+
+.range__slider__sum {
+  margin: 0 0 50px 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: url(../../../assets/images/hot/line-under.png) no-repeat;
+    background-size: cover;
+  }
+
+  .range__slider__sum__values {
+    position: relative;
+
+    &::before {
+      content: "1 000 ₽";
+      position: absolute;
+      left: 0;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 15px;
+      color: #c0c2c5;
+      top: 15px;
+    }
+    &::after {
+      content: "100 000 ₽";
+      position: absolute;
+      right: 0;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 15px;
+      color: #c0c2c5;
+      top: 15px;
+    }
+  }
+}
+
+//стили для всего ренжа(задний фон)
+.noUi-target {
+  background: #ececec;
+  border-radius: 8px;
+  border: none;
+  box-shadow: none;
+  height: 7px;
+  cursor: pointer;
+}
+
+//стили для закрашиваемой части
+.noUi-connect {
+  background: linear-gradient(81.55deg, #ffc83e 33.93%, #ff9f47 73.78%);
+}
+
+//стили для курсора которій тащим
+.noUi-horizontal {
+  .noUi-handle {
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
+
+    width: 21px;
+    height: 21px;
+    border: none;
+    border-radius: 50%;
+    background: url(../../assets/images/hot/arrow-input.png) center no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    box-shadow: none;
+  }
+}
+
+//для ціфр сверху
+.noUi-tooltip {
+  display: block;
+  position: absolute;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #000;
+  padding: 0px;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #45515f;
+}
+
+/***********slider-2 date**********/
+
+.range__slider__date {
+  margin: 0 0 50px 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: url(../../../assets/images/hot/line-under.png) no-repeat;
+    background-size: cover;
+  }
+
+  .range__slider__date__values {
+    position: relative;
+
+    &::before {
+      content: "3";
+      position: absolute;
+      left: 0;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 15px;
+      color: #c0c2c5;
+      top: 15px;
+    }
+    &::after {
+      content: "30";
+      position: absolute;
+      right: 0;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 15px;
+      color: #c0c2c5;
+      top: 15px;
+    }
+  }
+}
+
+/***************************************/
+
+.calculate__form__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 28px 0;
+  border-bottom: 1px solid #ececec79;
+
+  .calculate__btn {
+    display: inline-block;
+    padding: 21px 44px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: linear-gradient(81.55deg, #ffc83e 33.93%, #ff7347 73.78%);
+    border-radius: 8px;
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+      color: white;
+      text-shadow: 2px 2px 5px white;
+    }
+
+    @include breakpoint($mobile-bp) {
+      padding: 21px 36px;
+      font-size: 15px;
+    }
+
+    @include breakpoint(400px) {
+      padding: 21px 5px;
+      width: 100%;
+      font-size: 13px;
+    }
+  }
+}
+
+/********************calculate***********************/
+
+.calculate__item__title {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #45515f;
+  margin: 0 0 2px 0;
+}
+
+.calculate__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 44px;
+  padding: 34px 0 0 0;
+
+  .calculate__item {
+    width: 50%;
+    position: relative;
+
+    @include breakpoint(400px) {
+      width: 100%;
+    }
+  }
+
+  @include breakpoint(400px) {
+    gap: 35px;
+    padding: 20px 0 0 0;
+  }
+}
+
+.tooltip {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #f28925;
+  position: absolute;
+  bottom: -23px;
+}

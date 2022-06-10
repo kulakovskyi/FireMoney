@@ -1,0 +1,150 @@
+.weare {
+  padding: 35px 0 38px 0;
+  background: #f6f9fc;
+  .weare__container {
+    max-width: 1410px;
+    padding: 0 45px;
+    position: relative;
+
+    @include breakpoint($mobile-bp) {
+      padding: 0 15px;
+    }
+  }
+}
+
+.weare__title {
+  margin: 0 0 13px 0;
+
+  @include breakpoint(807px) {
+    margin: 0 0 0px 0;
+  }
+
+  @include breakpoint(387px) {
+    margin: 0 0 35px 0;
+  }
+}
+
+.weare__item {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 4px 44px rgba(84, 104, 123, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 22px;
+  padding: 51px 40px 46px 46px;
+}
+
+.weare__item__image {
+  margin: 0 0 26px 0;
+}
+
+.weare__item__name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #45515f;
+  margin: 0 0 19px 0;
+}
+
+.weare__item__town {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #93a0ab;
+  padding: 0 0 0 16px;
+  margin: 0 0 19px 0;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 16px;
+    top: 0px;
+    left: 0;
+    background: url(../../../assets/images/weare/icon-town.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+.weare__item__text {
+  margin: 0 0 27px 0;
+}
+
+.svg__yellow {
+  fill: #feb300;
+}
+
+.swiper {
+  height: 600px;
+  .swiper-slide {
+    @extend %flex-center;
+  }
+
+  @include breakpoint($mobile-bp) {
+    height: 550px;
+  }
+
+  @include breakpoint(397px) {
+    margin-bottom: 40px;
+  }
+}
+
+/* кнопки за контейнером(в html выносим за контейнер свайпера)*/
+
+.slider__buttons__cont {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+
+  .swiper-button-prev {
+    top: auto;
+    left: -40px;
+
+    @include breakpoint($mobile-bp) {
+      left: 0;
+    }
+  }
+
+  .swiper-button-next {
+    top: auto;
+    right: 50px;
+
+    @include breakpoint($mobile-bp) {
+      right: 35px;
+    }
+  }
+
+  .swiper-button-next:after {
+    color: rgba(0, 0, 0, 0.473);
+    font-size: 25px;
+  }
+
+  .swiper-button-prev:after {
+    color: rgba(0, 0, 0, 0.473);
+    font-size: 25px;
+  }
+}
+
+.weare__buttons {
+  @extend %flex-center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.weare__link__all {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #45515f;
+  padding: 22px 32px;
+  border: 1px solid #c9d2dd;
+  border-radius: 8px;
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.384);
+  }
+}

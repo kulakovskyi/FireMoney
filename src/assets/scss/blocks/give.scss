@@ -52,9 +52,8 @@
       position: relative;
     }
   }
-}
 
-/*&__row {
+  &__row {
     @include breakpoint(1074px) {
       display: flex;
       flex-direction: column;
@@ -68,4 +67,5 @@
       justify-content: center;
       align-items: center;
     }
-  }*/
+  }
+}

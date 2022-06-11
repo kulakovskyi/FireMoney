@@ -809,6 +809,10 @@ label {
     display: none;
 }
 
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 .form__step__2 {
     opacity: 0;
     visibility: hidden;

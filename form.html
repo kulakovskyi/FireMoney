@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="assets/css/style.min.css" />
+    <link rel="stylesheet" href="assets/css/form.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="robots" content="index, follow" />
+    <meta name="google" content="notranslate" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="" />
+    
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__row">
+            <div class="header__logo">
+              <a href="index.html" class="header__logo__link">Fire<span>Money</span></a>
+            </div>
+      
+            <div class="header__button">
+              <a href="cabinet.html" class="header__in__btn">вход в личный кабинет</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+<section class="form">
+  <div class="form__container">
+    <h2 class="form__title title">
+      Для получения займа под 0%*
+      <span>заполните заявку</span>
+    </h2>
+    <form action="#">
+      <div class="form__back">
+        <div class="form__step__1">
+          <h3 class="form__step__title-min">
+            Поторопитесь, до окончания акционного предложения осталось
+          </h3>
+          <div class="form__timer">
+            <div class="form__timer__hours">
+              <span></span>
+            </div>
+            <div class="form__timer__minutes">
+              <span></span>
+            </div>
+          </div>
+          <div class="hot__calculate">
+            <div class="hot__range__row">
+              <div class="range__item">
+                <p class="calculate__form__sum form__title">Cумма кредита</p>
+                <div class="range__slider__sum">
+                  <div class="range__slider__sum__values"></div>
+                </div>
+              </div>
+              <div class="range__item">
+                <p class="calculate__form__sum form__title form__title__border">Cрок кредита</p>
+                <div class="range__slider__date">
+                  <div class="range__slider__date__values"></div>
+                </div>
+              </div>
+            </div>
+            <div class="calculate__row">
+              <div class="calculate__item">
+                <h3 class="calculate__item__title">Вы берете</h3>
+                <div class="tooltip__sum tooltip"></div>
+              </div>
+              <div class="calculate__item">
+                <h3 class="calculate__item__title">К возврату</h3>
+                <div class="tooltip__back tooltip"></div>
+              </div>
+              <div class="calculate__item">
+                <h3 class="calculate__item__title">Дата возврата</h3>
+                <div class="tooltip__date tooltip"></div>
+              </div>
+              <div class="calculate__item">
+                <h3 class="calculate__item__title">Ежемесячный платеж</h3>
+                <div class="tooltip__price-mounth tooltip"></div>
+              </div>
+            </div>
+          </div>
+          <div class="form__inputs">
+            <div class="form__inputs__surname form__inputs__item">
+              <p class="form__inputs__title">Фамилия</p>
+              <input
+                type="text"
+                id="surname"
+                name="surname"
+                class="js-input-1 text-valid"
+                maxlength="15"
+                onkeypress="noDigits(event)"
+              />
+            </div>
+            <div class="form__inputs__name form__inputs__item">
+              <p class="form__inputs__title">Имя</p>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="js-input-1 text-valid"
+                maxlength="10"
+                onkeypress="noDigits(event)"
+              />
+            </div>
+            <div class="form__inputs__father form__inputs__item">
+              <p class="form__inputs__title">Отчество</p>
+              <input
+                type="text"
+                id="father"
+                name="father"
+                class="js-input-1 text-valid"
+                maxlength="15"
+                onkeypress="noDigits(event)"
+              />
+            </div>
+            <div class="form__inputs__tel form__inputs__item">
+              <p class="form__inputs__title">Телефон</p>
+              <div class="input__tel">
+                <input
+                  type="tel"
+                  id="tel"
+                  name="tel"
+                  class="js-input-1 js-tel"
+                  placeholder="+7 (9__) ___.__.__"
+                />
+              </div>
+            </div>
+            <div class="form__inputs__date form__inputs__item">
+              <p class="form__inputs__title">Дата рождения</p>
+              <div class="input__date">
+                <input type="date" id="date" name="date" class="js-input-1 js-date" />
+              </div>
+            </div>
+            <div class="form__inputs__town form__inputs__item">
+              <p class="form__inputs__title">Город</p>
+              <input
+                type="text"
+                id="town"
+                name="town"
+                class="js-input-1"
+                maxlength="10"
+                onkeypress="noDigits(event)"
+              />
+            </div>
+          </div>
+          <div class="form__all__in">
+            <div class="form__all__sheckbox">
+              <input type="checkbox" name="check" id="check" class="js-check" />
+              <label for="check" class="label-check"></label>
+            </div>
+            <p class="form__all__text">
+              Заполняя заявку на сайте вы даете согласие со следующими условиями:
+              <a href="#">
+                Политика обработки персональных данных , Публичная оферта и действующие тарифы ,
+                Согласие на обработку персональных данных , Соглашение с подпиской и Соглашение о
+                хранении учетных данных владельца карт. </a
+              >Стоимость услуги четыреста девяносто шесть руб. Списание производится раз в 5 дней.
+              Настоящим подтверждаю, что не являюсь получателем единовременных и/или регулярных
+              денежных выплат, предусмотренных Указами Президента РФ.
+            </p>
+          </div>
+        </div>
+        <div class="form__step__2">
+          <h2 class="form__step2__title">Ваша анкета сформирована</h2>
+          <p class="form__step2__text">Вероятность одобрения <span>50%</span></p>
+          <div class="form__action"></div>
+          <div id="accordion" class="accordion">
+            <div class="accordion__item">
+              <div class="accordion__header">
+                Добавить паспорт
+                <div class="accordeon__header__info">
+                  <div class="acordeon__header__info-1">Обяз.</div>
+                  <div class="acordeon__header__info-2">20%</div>
+                </div>
+              </div>
+              <div class="accordion__body">
+                <div class="accordion__content">
+                  <div class="step2__item__row">
+                    <div class="step2__item">
+                      <h4 class="step2__item__title">Серия</h4>
+                      <input type="text" id="seriesPass" name="seriesPass" />
+                    </div>
+                    <div class="step2__item">
+                      <h4 class="step2__item__title">Номер</h4>
+                      <input type="number" id="numberPass" name="numberPass" />
+                    </div>
+                  </div>
+                  <div class="step2__item">
+                    <h4 class="step2__item__title">Место рождения</h4>
+                    <input type="text" id="placeTown" name="placeTown" />
+                  </div>
+                  <div class="step2__item">
+                    <h4 class="step2__item__title">Дата выдачи</h4>
+                    <input type="date" id="dateIn" name="dateIn" />
+                  </div>
+                  <div class="step2__item">
+                    <h4 class="step2__item__title">Код подтверждения</h4>
+                    <input type="number" id="code" name="code" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__header">
+                Добавить прописку
+                <div class="accordeon__header__info">
+                  <div class="acordeon__header__info-1">Обяз.</div>
+                  <div class="acordeon__header__info-2">20%</div>
+                </div>
+              </div>
+              <div class="accordion__body">
+                <div class="accordion__content">
+                  <div class="step2__item">
+                    <h4 class="step2__item__title">Место рождения</h4>
+                    <input type="text" id="placeTown" name="placeTown" />
+                  </div>
+                  <div class="step2__item">
+                    <h4 class="step2__item__title">Дата выдачи</h4>
+                    <input type="date" id="dateIn" name="dateIn" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__header">
+                Добавить снилс
+                <div class="accordeon__header__info">
+                  <div class="acordeon__header__info-1">Обяз.</div>
+                  <div class="acordeon__header__info-2">20%</div>
+                </div>
+              </div>
+              <div class="accordion__body">
+                <div class="accordion__content">
+                  <div class="step2__item">
+                    <h4 class="step2__item__title">Снилс</h4>
+                    <input type="number" id="placeTown" name="placeTown" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__header">
+                Добавить e-mail
+                <div class="accordeon__header__info">
+                  <div class="acordeon__header__info-1">Обяз.</div>
+                  <div class="acordeon__header__info-2">20%</div>
+                </div>
+              </div>
+              <div class="accordion__body">
+                <div class="accordion__content">
+                  <div class="step2__item">
+                    <h4 class="step2__item__title">E-mail</h4>
+                    <input type="email" id="placeTown" name="placeTown" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form__step__3">
+          <div class="step3__border">
+            <h3 class="step__3__title">Иванов Иван ИваноВик</h3>
+            <p class="step__3__text">Мы проверяем введенные вами данные</p>
+            <p class="step__3__info">
+              Наши алгоритмы проверяют информацию введенную вами на предыдущих формах, это займет не
+              более минуты. Пожалуйста не закрывайте страницу.
+            </p>
+            <div class="step__3__side"></div>
+            <div class="step__3__image">
+              <img src="assets/images/FORM/step3/man.png" alt="man" />
+              <div class="loading__circle">
+                <div class="loading"></div>
+              </div>
+            </div>
+            <div class="step__3__side"></div>
+          </div>
+        </div>
+        <div class="form__step__4">
+          <div class="step__border">
+            <h3 class="step__3__title">Иванов Иван ИваноВик</h3>
+            <p class="step__3__text">Ваша заявка отправлена</p>
+            <div class="step__4__side"></div>
+            <p class="step4__text">
+              <span>Необходимо активировать сервис.</span>
+              <span>Для продолжения вам необходимо активировать подписку.</span>
+              <span>Укажите реквизиты вашей карты.</span>
+            </p>
+            <div class="sted4__info">
+              <p>
+                Внимание! С вашей карты будет удержана сумма в 1 рубль для привязки карты и
+                дальнейшей оплаты услуг. Услуга обработки заявки платная и составляет 99 до 303 руб.
+                раз в 5 дней*
+              </p>
+            </div>
+            <h4 class="step4__bank__title">Безопасная оплата банковской картой</h4>
+            <div class="step4__bank__form">
+              <div class="bank__form__row">
+                <div class="bank__form__item__1">
+                  <div class="bank__form__item__number">
+                    <p class="bank__form__title">Номер карты</p>
+                    <div class="number__cart">
+                      <input type="number" name="numberCard" id="numberCard" />
+                    </div>
+                  </div>
+                  <div class="bank__form__date">
+                    <p class="bank__form__title">Срок действия</p>
+                    <div class="bank__form__date__rom">
+                      <input
+                        type="number"
+                        name="dateCardDay"
+                        id="dateCardDay"
+                        onkeypress="this.value=this.value.substring(0,1);"
+                      />
+                      <div>/</div>
+                      <input
+                        type="number"
+                        name="dateCardMounh"
+                        id="dateCardMounh"
+                        onkeypress="this.value=this.value.substring(0,1);"
+                      />
+                    </div>
+                  </div>
+                  <div class="bank__form__name">
+                    <p class="bank__form__title">Имя владельца</p>
+                    <div class="name__cart">
+                      <input
+                        type="text"
+                        name="nameCard"
+                        id="nameCard"
+                        class="name-class"
+                        onkeypress="noDigits(event)"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="bamk__form__item__2">
+                  <div class="cvv__cart">
+                    <p class="bank__form__title">CVC/CVV</p>
+                    <input
+                      type="number"
+                      id="cvv"
+                      name="cvv"
+                      onkeypress="this.value=this.value.substring(0,2);"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step__4__side"></div>
+          </div>
+        </div>
+        <div class="form__step__5">
+          <h3 class="step__3__title">Введите код подтверждения из SMS</h3>
+          <div class="step__4__side"></div>
+          <input
+            type="number"
+            name="codeSMS"
+            id-="codeSMS"
+            placeholder="Код подтверждения из SMS"
+          />
+          <div class="step__5__counter">
+            Запросить код повторно можночерез <span class="counter__sms">42</span> сек.
+          </div>
+          <div class="step__4__side"></div>
+        </div>
+        <div class="form__step__6">
+          <h3 class="step__3__title">Иванов Иван ИваноВик</h3>
+          <p class="step__3__text">Выберете МФО в которых вы оставляли заявку за все время.</p>
+          <div class="step__4__side"></div>
+          <div class="step__6__text">
+            Это увеличит шанс получения займа многократно, а мы подберем лучшие условия.
+          </div>
+          <div class="step__6__chek__row">
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check1" id="check1" />
+                <label for="check1"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check2" id="check2" />
+                <label for="check2"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check3" id="check3" />
+                <label for="check3"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check4" id="check4" />
+                <label for="check4"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check5" id="check5" checked />
+                <label for="check5"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check6" id="check6" />
+                <label for="check6"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check7" id="check7" />
+                <label for="check7"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check8" id="check8" checked />
+                <label for="check8"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check9" id="check9" />
+                <label for="check9"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check10" id="check10" />
+                <label for="check10"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check11" id="check11" />
+                <label for="check11"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check12" id="check12" />
+                <label for="check12"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check13" id="check13" />
+                <label for="check13"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" checked alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check14" id="check14" />
+                <label for="check14"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check15" id="check15" />
+                <label for="check15"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check16" id="check16" checked />
+                <label for="check16"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check17" id="check17" checked />
+                <label for="check17"></label>
+              </div>
+            </div>
+            <div class="step__6__item">
+              <div class="step__6__item__title">
+                <img src="assets/images/FORM/step6/webbankir.png" alt="web" />
+              </div>
+              <div class="step__6__input">
+                <input type="checkbox" name="check18" id="check18" />
+                <label for="check18"></label>
+              </div>
+            </div>
+          </div>
+          <section class="ways">
+            <div class="ways__container">
+              <h2 class="ways__title title">Способы получения</h2>
+              <div class="ways__row">
+                <div class="ways__item">
+                  <div class="ways__item__image">
+                    <img src="assets/images/ways/yandex.png" alt="yandex" />
+                  </div>
+                  <a href="#" class="ways__item__link">
+                    <img src="assets/images/ways/arrow.png" alt="arrow" />
+                  </a>
+                </div>
+                <div class="ways__item">
+                  <div class="ways__item__image">
+                    <img src="assets/images/ways/kivi.png" alt="kivi" />
+                  </div>
+                  <a href="#" class="ways__item__link">
+                    <img src="assets/images/ways/arrow.png" alt="arrow" />
+                  </a>
+                </div>
+                <div class="ways__item">
+                  <div class="ways__item__image">
+                    <img src="assets/images/ways/visa.png" alt="visa" />
+                  </div>
+                  <a href="#" class="ways__item__link">
+                    <img src="assets/images/ways/arrow.png" alt="arrow" />
+                  </a>
+                </div>
+                <div class="ways__item">
+                  <div class="ways__item__image">
+                    <img src="assets/images/ways/mastercard.png" alt="mastercard" />
+                  </div>
+                  <a href="#" class="ways__item__link">
+                    <img src="assets/images/ways/arrow.png" alt="arrow" />
+                  </a>
+                </div>
+                <div class="ways__item">
+                  <div class="ways__item__image">
+                    <img src="assets/images/ways/money.png" alt="money" />
+                  </div>
+                  <a href="#" class="ways__item__link">
+                    <img src="assets/images/ways/arrow.png" alt="arrow" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="form__step__7">
+          <div class="step3__border">
+            <h3 class="step__3__title">Иванов Иван ИваноВик</h3>
+            <p class="step__3__text">
+              Ваше кредитное предложение формируется, осталось совсем чуть-чуть.
+            </p>
+            <div class="step__3__side"></div>
+            <div class="step__3__image">
+              <img src="assets/images/FORM/step7/man7.png" alt="man" />
+              <div class="loading__circle">
+                <div class="loading"></div>
+              </div>
+            </div>
+            <div class="step__3__side"></div>
+          </div>
+        </div>
+        <div class="form__step__8">
+          <div class="step3__border">
+            <h3 class="step__3__title">УСПЕШНО!</h3>
+            <div class="step__3__side"></div>
+            <p class="step__3__text">Ваше кредитное предложение оформленно.</p>
+            <div class="form__step8__link">
+              <a href="index.html" class="btn btn-link__step8">Вернуться на главную</a>
+            </div>
+          </div>
+        </div>
+        <div class="form__sidebar">
+          <div class="form__sidebar__step">
+            Шаг <span class="step-counter">1</span> из <span>7</span>
+          </div>
+          <div class="form__sidebar__line">
+            <div class="sidebar__line"></div>
+            <p class="sidebar__text">+10% к одобрению при заполнении этой формы</p>
+          </div>
+          <div class="form__sidebar__button">
+            <button type="button" class="btn btn-step1">Продолжить</button>
+            <button type="button" class="btn btn-step2">Продолжить</button>
+            <button type="button" class="btn btn-step4">Продолжить</button>
+            <button type="button" class="btn btn-step5">Продолжить</button>
+            <button type="button" class="btn btn-step6">Продолжить</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__row__1">
+            <div class="footer__logo">
+              <a href="index.html" class="footer__logo__link">Fire<span>Money</span></a>
+            </div>
+            <div class="footer__contact">
+              <a href="mailto:Kustohelp@gmail.com" class="footer__email"
+                ><span class="icon-mail"></span> <span> Kustohelp@gmail.com </span></a
+              >
+              <a href="tel:8 800 808-00-80" class="footer__telephone"
+                ><span class="icon-tel"></span> <span>8 800 808-00-80</span></a
+              >
+            </div>
+          </div>
+          <div class="footer__credits">
+            <h5 class="footer__credits__title footer-title">Список кредиторов</h5>
+            <ul class="footer__creditc__list">
+              <li class="credits__item">
+                ООО "МКК СКОРФИН", 344101, г. Ростов-на-Дону, ул. Портовая, д. 193, оф. 302, Лицензия №
+                1703020008232, ИНН 3664223480, ОГРН 1163668109428, процентная ставка 0,99% в день
+              </li>
+              <li class="credits__item">
+                ООО МФК "Быстроденьги", 123290 г. Москва, 1-й Магистральный туп., д.11 стр.10, Лицензия №
+                2110573000002, ИНН 7325081622, ОГРН 1087325005899, процентная ставка 0% в день
+              </li>
+              <li class="credits__item">
+                ООО "МКК КАНГАРИЯ", 344101, г. Ростов-на-Дону, ул. Ленинградская, д. 7, пом. № П-13,
+                Лицензия № 1904067009295, ИНН 9201526872, ОГРН 1189204008564, процентная ставка 0% в день
+              </li>
+              <li class="credits__item">
+                ООО МКК "Киберлэндинг", 420043, г. Казань, ул. Достоевского, д. 52, оф. 3, Лицензия №
+                1803392008777, ИНН 1659182700, ОГРН 1171690064920, процентная ставка 0% в день
+              </li>
+              <li class="credits__item">
+                ООО МКК "Кредиттер", 115280, г. Москва, ул. Ленинская Слобода, д. 19, стр. 6, ком. 6, 7,
+                Лицензия № 1903045009373, ИНН 7702463482, ОГРН 1197746100530, процентная ставка 0,99% в
+                день
+              </li>
+              <li class="credits__item">
+                ООО МФК "Лайм-Займ", 630102, г. Новосибирск, ул. Кирова, д. 48, оф. 1401, Лицензия №
+                651303045004102, ИНН 7724889891, ОГРН 1137746831606, процентная ставка 0% в день
+              </li>
+              <li class="credits__item">
+                ООО МКК "Академическая", 630091, г. Новосибирск, ул. Державина, 28, оф. 301, Лицензия №
+                1903550009325, ИНН 5407973316, ОГРН 1195476007605, процентная ставка 0% в день
+              </li>
+              <li class="credits__item">
+                ООО МКК "КАППАДОКИЯ", 443045, г. Самара, ул. Авроры, д. 150, пом. №н4, офис 306.3,
+                Лицензия № 1903475009492, ИНН 7459007268, ОГРН 1197456052199, процентная ставка 0% в день
+              </li>
+              <li class="credits__item">
+                ООО МКК "ДЗП-Центр", 190031, г. Санкт-Петербург, пер. Спасский, д. 14/35, лит. А, пом. 38
+                Н, Лицензия № 651403140005467, ИНН 7838500558, ОГРН 1147847029990, процентная ставка 0% в
+                день
+              </li>
+              <li class="credits__item">
+                ООО МКК "Кватро", 443030, г. Самара, ул. Чернореченская, д. 21, оф. 425, Лицензия №
+                1903550009364, ИНН 5402053330, ОГРН 1195476044609, процентная ставка 0% в день
+              </li>
+              <li class="credits__item">
+                ООО МКК "Турбозайм", 123290, г. Москва, туп. Магистральный 1-й, д. 11, стр.10, Лицензия №
+                651303045003951, ИНН 7702820127, ОГРН 1137746702367, процентная ставка 0,99% в день
+              </li>
+            </ul>
+          </div>
+      
+          <div class="footer__copyright">
+            <p class="footer__copyright__text">
+              <img src="assets/images/footer/18photo.png" alt="18+" />
+              <span> Imoneys Сredit ©2015–2022 Все права на сайт защищены.</span>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="assets/js/nouislider.min.js"></script>
+    <script src="assets/js/base-min.js"></script>
+    <script src="assets/js/dinamicAdaptive-min.js"></script>
+    <script src="assets/js/form-min.js"></script>
+  </body>
+</html>

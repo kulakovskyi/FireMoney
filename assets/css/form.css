@@ -622,6 +622,11 @@ label {
     cursor: pointer;
 }
 
+input[type=date] {
+    -webkit-appearance: none;
+    background: transparent;
+}
+
 /********************check inputs*****************/
 .form__all__in {
     display: -ms-flexbox;

@@ -1,0 +1,20 @@
+.form__step__7 {
+  max-width: 768px;
+  margin: 0 auto 37px auto;
+  height: 0;
+  visibility: hidden;
+  transform: scale(0);
+  opacity: 0;
+  transition: 1.2s ease;
+
+  &._open {
+    height: 100%;
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .step3__border {
+    border: 2px solid #ff9f47;
+  }
+}

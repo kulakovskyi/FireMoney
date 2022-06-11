@@ -1,0 +1,112 @@
+.form__step__3 {
+  background: linear-gradient(149.57deg, #ff7b00 4.98%, #ffc83e 88.34%);
+  border-radius: 22px;
+  padding: 2px;
+  max-width: 768px;
+  margin: 0 auto 10px auto;
+  opacity: 0;
+  height: 0;
+  transform: scale(0);
+  visibility: hidden;
+  transition: 1.2s ease;
+
+  &._open {
+    opacity: 1;
+    height: 100%;
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+.step3__border {
+  background: white;
+  padding: 50px 50px 30px 50px;
+  filter: drop-shadow(0px 4px 44px rgba(130, 141, 150, 0.15));
+  border-radius: 22px;
+
+  @include breakpoint($mobile-bp) {
+    padding: 30px 20px 30px 20px;
+  }
+}
+
+.step__3__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #45515f;
+  margin: 0 0 10px 0;
+}
+
+.step__3__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #45515f;
+  margin: 0 0 10px 0;
+}
+
+.step__3__info {
+  max-width: 636px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #45515f;
+  margin: 0 auto 8px auto;
+}
+
+.step__3__side {
+  height: 1px;
+  width: 100%;
+  background: #f2f2f2;
+}
+
+.step__3__image {
+  margin: 0 0 19px 0;
+  position: relative;
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.loading__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading {
+  width: 0;
+  padding: 34px;
+
+  background-image: radial-gradient(
+      circle at 0% 0%,
+      transparent 40%,
+      #ffc83e 40%,
+      #ffc83e 70%,
+      transparent 70%
+    ),
+    radial-gradient(circle at 100% 0%, transparent 40%, white 40%, white 70%, transparent 70%),
+    radial-gradient(circle at 100% 100%, transparent 40%, white 40%, white 70%, transparent 70%),
+    radial-gradient(circle at 0% 100%, transparent 40%, white 40%, white 70%, transparent 70%);
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  background-position: 100% 100%, 0 100%, 0 0, 100% 0;
+  animation: loading1 linear 0.7s infinite;
+
+  @include breakpoint($mobile-bp) {
+    padding: 22px;
+  }
+}
+
+@keyframes loading1 {
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,54 @@
+.header {
+  color: #45515f;
+  padding: 25px 0;
+  position: relative;
+
+  &__logo {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  &__user {
+    @include breakpoint(757px) {
+      background: #ffffff;
+      border: 1px solid #e2eefa;
+      border-radius: 11px;
+      padding: 20px;
+      text-align: center;
+    }
+  }
+
+  &__user__name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 103.57%;
+    margin: 0 0 7px 0;
+  }
+
+  &__user__tel {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 103.57%;
+  }
+
+  &__out__link {
+    padding: 15px 12px 15px 15px;
+    border: 1px solid #e2eefa;
+    border-radius: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+
+    &:hover {
+      background: rgba(26, 25, 25, 0.39);
+    }
+  }
+}

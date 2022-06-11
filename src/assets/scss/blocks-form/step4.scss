@@ -1,0 +1,234 @@
+.form__step__4 {
+  height: 0;
+  visibility: hidden;
+  transform: scale(0);
+  opacity: 0;
+  transition: 1.2s ease;
+
+  &._open {
+    height: 100%;
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.step__4__side {
+  height: 1px;
+  width: 100%;
+  background: #f2f2f2;
+  margin: 0 0 26px 0;
+}
+
+.step4__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #45515f;
+  max-width: 467px;
+  margin: 0 auto 20px auto;
+
+  span {
+    display: block;
+  }
+}
+
+.sted4__info {
+  padding: 16px 10px;
+  background: linear-gradient(8.14deg, #ececec -151.99%, rgba(236, 236, 236, 0) 189.44%);
+  border-radius: 8px;
+  margin: 0 0 34px 0;
+
+  p {
+    margin: 0 auto;
+    max-width: 561px;
+    text-align: center;
+  }
+}
+
+.step4__bank__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #45515f;
+  margin: 0 0 26px 0;
+}
+
+/*bank form*/
+
+.bank__form__item__1 {
+  background: #ffffff;
+  border: 2px solid #ececec;
+  border-radius: 8px;
+  max-width: 415px;
+  padding: 20px 70px 20px 20px;
+
+  input {
+    background: #fdfdfd;
+    border: 2px solid #ececec;
+    border-radius: 8px;
+    padding: 14px 14px 14px 24px;
+    width: 100%;
+    margin: 0 0 11px 0;
+  }
+
+  .name-class {
+    margin: 0;
+  }
+
+  @include breakpoint(344px) {
+    padding: 20px 42px 20px 20px;
+  }
+}
+
+.bank__form__title {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  color: #45515f;
+  margin: 0 0 7px 0;
+}
+
+.bank__form__date__rom {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  margin: 0 0 11px 0;
+  position: relative;
+
+  input {
+    flex: 0 1 15%;
+    padding: 12px;
+    margin: 0;
+
+    @include breakpoint(507px) {
+      flex: 0 1 35%;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 130px;
+    transform: translateY(-50%);
+    width: 19px;
+    height: 19px;
+    background: url(../../../assets/images/FORM/step4/what.png) no-repeat;
+    background-size: cover;
+
+    @include breakpoint(507px) {
+      left: auto;
+      right: -15px;
+    }
+  }
+}
+
+/*number-cart*/
+
+.number__cart {
+  position: relative;
+  margin: 0 0 7px 0;
+
+  input {
+    margin: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 11px;
+    height: 8px;
+    background: url(../../../assets/images/FORM/step4/cart.png) no-repeat;
+    background-size: cover;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -33px;
+    transform: translateY(-50%);
+    width: 19px;
+    height: 19px;
+    background: url(../../../assets/images/FORM/step4/what.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+.name__cart {
+  position: relative;
+  margin: 0 0 7px 0;
+
+  input {
+    margin: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -33px;
+    transform: translateY(-50%);
+    width: 19px;
+    height: 19px;
+    background: url(../../../assets/images/FORM/step4/what.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+.bamk__form__item__2 {
+  background: #ffffff;
+  border: 2px solid #ececec;
+  border-radius: 0px 8px 8px 0px;
+  max-width: 250px;
+  padding: 82px 140px 40px 15px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 34px;
+    height: 33px;
+    width: 100%;
+    background: #ececec;
+  }
+
+  input {
+    width: 50px;
+    padding: 5px;
+    background: #fdfdfd;
+    border: 2px solid #ececec;
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  @include breakpoint(775px) {
+    border-radius: 8px;
+    width: 100%;
+  }
+}
+
+.bank__form__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 19px 0;
+
+  @include breakpoint(775px) {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+}

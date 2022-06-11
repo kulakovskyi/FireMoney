@@ -1,0 +1,399 @@
+/*sms*/
+
+.info__dev {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info__dev__sms {
+  background: #ffffff;
+  border: 1px solid #e2eefa;
+  border-radius: 11px;
+  padding: 20px 20px 19px 30px;
+  max-width: 407px;
+
+  @include breakpoint(1133px) {
+    max-width: none;
+  }
+
+  .dev__sms__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 0 13px 0;
+  }
+
+  .dev__sms__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 103.57%;
+  }
+
+  .dev__sms__text {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 103.57%;
+    margin: 0 0 13px 0;
+  }
+
+  .dev__sms__link {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 103.57%;
+    text-decoration-line: underline;
+    color: #ff7347;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: #c75d3d;
+    }
+  }
+}
+
+/**чекбокс**/
+
+.checkbox {
+  display: inline-block;
+  padding: 5px 5px 5px 46px;
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: inherit;
+  }
+}
+
+.checkbox span:before,
+.checkbox span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.checkbox span:before {
+  left: 0;
+  height: 24px;
+  margin-top: -13px;
+  width: 44px;
+  border-radius: 40px;
+  background: #f0f1f1;
+}
+
+.checkbox span:after {
+  left: 3px;
+  margin-top: -10px;
+  height: 18px;
+  width: 18px;
+  background: #ff7b00;
+  border-radius: 50%;
+}
+
+.checkbox input:checked + span:before {
+  background: #b8d1d1;
+}
+.checkbox input:checked + span:after {
+  background-color: #ffd000;
+  left: 22px;
+}
+.checkbox input:disabled + span {
+  opacity: 0.35;
+}
+.checkbox input:disabled + span:before {
+  background: #ccc;
+}
+
+/**CART*/
+
+.ifo__dev__cart {
+  padding: 17px 20px 20px 30px;
+  background: #ffffff;
+  border: 1px solid #e2eefa;
+  border-radius: 11px;
+  max-width: 407px;
+
+  .dev__cart__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 103.57%;
+    margin: 0 0 13px 0;
+  }
+
+  .dev__cart__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 0 10px 0;
+  }
+
+  .dec__cart__text {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .dev__cart__del {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    background: transparent;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 9.4px;
+      height: 9.4px;
+      left: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url(../../assets/images/CABINET/left/del.png) no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .dev__cart__info {
+    border: 1px solid #d3dae2;
+    border-radius: 8px;
+    padding: 35px 23px;
+    text-align: center;
+    margin: 0 0 14px 0;
+    overflow: hidden;
+  }
+
+  .dev__cart__image {
+    display: block;
+    margin: 0 auto 14px auto;
+  }
+
+  .dev__cart__number {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 103.57%;
+    margin: 0 0 36px 0;
+
+    @include breakpoint(359px) {
+      font-size: 18px;
+    }
+  }
+
+  .cart__side {
+    height: 28px;
+    width: 150.4%;
+    background: #7b8c98;
+    margin-left: -24px;
+  }
+
+  .dev__cart__links {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include breakpoint(341px) {
+      justify-content: center;
+    }
+
+    a {
+      display: inline-block;
+      background: #ffffff;
+      border: 1px solid #e2eefa;
+      border-radius: 8px;
+      padding: 17px 42px 15px 60px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 103.57%;
+      color: #45515f;
+      position: relative;
+      transition: 0.3s ease;
+
+      &:hover {
+        background: #5a51514b;
+      }
+
+      @include breakpoint(829px) {
+        padding: 17px 23px 15px 60px;
+      }
+
+      @include breakpoint(500px) {
+        padding: 17px 22px 15px 40px;
+      }
+
+      @include breakpoint(341px) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .dev__cart__ot__link::before {
+      content: "";
+      position: absolute;
+      width: 19px;
+      height: 19px;
+      top: 50%;
+      left: 32px;
+      transform: translateY(-50%);
+      background: url(../../assets/images/CABINET/left/ot.png) no-repeat;
+      background-size: cover;
+
+      @include breakpoint(500px) {
+        left: 12px;
+      }
+    }
+
+    .dev__cart__un__link::before {
+      content: "";
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      top: 50%;
+      left: 32px;
+      transform: translateY(-50%);
+      background: url(../../assets/images/CABINET/left/del-gra.png) no-repeat;
+      background-size: cover;
+
+      @include breakpoint(500px) {
+        left: 12px;
+      }
+    }
+  }
+}
+
+/**documents**/
+
+.dev__cart__document {
+  background: #ffffff;
+  border: 1px solid #e2eefa;
+  border-radius: 11px;
+  padding: 20px 40px 20px 30px;
+  max-width: 407px;
+
+  .cart__document__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 103.57%;
+    margin: 0 0 14px 0;
+  }
+
+  .cart__document__link {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 159.57%;
+    text-decoration-line: underline;
+    color: #ff7b00;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: #c75d3d;
+    }
+  }
+
+  @include breakpoint(1133px) {
+    padding: 20px 15px 20px 30px;
+  }
+}
+
+/**button prop **/
+
+.dev__cart__prop {
+  max-width: 407px;
+}
+
+.csrt__prop__link {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 103.57%;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(81.55deg, #ffc83e 33.93%, #ff7347 73.78%);
+  border-radius: 8px;
+  padding: 30px 130px 30px 76px;
+  width: 100%;
+  position: relative;
+  transition: 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 29px;
+    width: 29px;
+    top: 50%;
+    left: 32px;
+    transform: translateY(-50%);
+    background: url(../../assets/images/CABINET/left/prop.png) no-repeat;
+    background-size: cover;
+  }
+
+  &:hover {
+    transform: scale(1.01);
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+  }
+
+  @include breakpoint(1133px) {
+    padding: 30px 40px 30px 76px;
+  }
+}
+
+.info__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  .info__tranzaktion {
+    flex: 1 1 auto;
+  }
+
+  @include breakpoint(1133px) {
+    flex-direction: column-reverse;
+  }
+}
+
+/******************ADAPT********************/
+
+.info__dev__row__2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @include breakpoint(1133px) {
+    flex-direction: row;
+  }
+
+  @include breakpoint(757px) {
+    flex-direction: column;
+  }
+}
+
+.info__item__row__3 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 0 1 50%;
+}
+
+.dev__cart__document {
+  @include breakpoint(1133px) {
+    flex: 1 1 auto;
+    max-width: none;
+  }
+}
+
+.ifo__dev__cart {
+  @include breakpoint(1133px) {
+    max-width: none;
+    flex: 0 1 50%;
+  }
+}
+
+.dev__cart__prop {
+  @include breakpoint(1133px) {
+    max-width: none;
+  }
+}

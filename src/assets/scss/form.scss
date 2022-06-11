@@ -1,0 +1,25 @@
+@import "base/_mixins.scss";
+@import "base/_vars.scss";
+
+.header {
+  position: relative;
+  background: linear-gradient(278.04deg, #ffc83e 31.99%, #ff9f47 81.27%);
+  padding: 36px 0 36px 0;
+
+  @include breakpoint($tablet-bp) {
+    padding: 26px 0 36px 0;
+  }
+}
+
+label {
+  cursor: pointer;
+}
+
+@import "blocks-form/step1.scss";
+@import "blocks-form/step2.scss";
+@import "blocks-form/step3.scss";
+@import "blocks-form/step4.scss";
+@import "blocks-form/step5.scss";
+@import "blocks-form/step6.scss";
+@import "blocks-form/step7.scss";
+@import "blocks-form/step8.scss";

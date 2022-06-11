@@ -1,0 +1,15 @@
+@import "base/_mixins.scss";
+@import "base/_vars.scss";
+
+.wrapper {
+  background: #f6f9fc;
+}
+
+[class*="__container"] {
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+@import "cabinet/header.scss";
+@import "cabinet/transaction.scss";
+@import "cabinet/left-block.scss";

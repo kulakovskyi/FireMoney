@@ -1,0 +1,47 @@
+.form__step__8 {
+  max-width: 500px;
+  margin: 0 auto;
+
+  .step__3__side {
+    margin: 0 0 30px 0;
+  }
+
+  .step__3__title {
+    margin: 0 0 30px 0;
+  }
+
+  .step__3__text {
+    margin: 0 0 30px 0;
+  }
+
+  height: 0;
+  visibility: hidden;
+  transform: scale(0);
+  opacity: 0;
+  transition: 1.2s ease;
+
+  &._open {
+    height: 100%;
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .step3__border {
+    border: 2px solid #ff9f47;
+  }
+}
+
+.form__step8__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .btn-link__step8 {
+    @include breakpoint($tablet-bp) {
+      padding: 21px 16px;
+      font-size: 15px;
+      text-align: center;
+    }
+  }
+}

@@ -6,6 +6,8 @@
   <li>⭐Сделан адаптив до 320px</li>
   <li>⭐Использован динамический адаптив</li>
   <li>⭐Сделана многоуровневая форма с валидацией на странице <a href="https://kulakovskyi.github.io/FireMoney/form.html">Оформить заявку</a></li>
+  <li>⭐Использыванна маска для воода телефона</li>
+  <li>⭐Сделана форма ввода банковских карт</li>
   <li>⭐Реализованы 7 шагов в форме на странице формы <a href="https://kulakovskyi.github.io/FireMoney/form.html">открыть</a></li>
   <li>⭐Разработан и адаптирован личный кабинет на страницу <a href="https://kulakovskyi.github.io/FireMoney/cabinet.html">Кабинет</a></li>
   <li>⭐Реализованы слайдеры</li>
